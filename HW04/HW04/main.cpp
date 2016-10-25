@@ -38,9 +38,28 @@ int* doubleCapacity(const int* list, int size){
 }
 
 // 11.5
-
+int Smallest(){
+    int nums[8];
+    int* numsPTR = nums;
+    numsPTR[0] = 1;
+    numsPTR[1] = 2;
+    numsPTR[2] = 4;
+    numsPTR[3] = 5;
+    numsPTR[4] = 10;
+    numsPTR[5] = 100;
+    numsPTR[6] = 2;
+    numsPTR[7] = -22;
+    int smallest = *numsPTR;
+    for (int x=1;x<8;x++){
+        if (numsPTR[x]<smallest){
+            smallest =numsPTR[x];
+        }
+    }
+    return smallest;
+}
 int main() {
     Average();
+    Smallest();
     return 0;
 }
 
