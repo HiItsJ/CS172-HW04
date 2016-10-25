@@ -57,6 +57,59 @@ int Smallest(){
     }
     return smallest;
 }
+
+// 11.9
+class Rectangle2D{
+private:
+    double x;
+    double y;
+    double width;
+    double height;
+public:
+    int getX(){
+        return x;
+    }
+    int getY(){
+        return y;
+    }
+    int getWidth(){
+        return width;
+    }
+    int getHeight(){
+        return height;
+    }
+    void setX(int newX){
+        x = newX;
+    }
+    void setY(int newY){
+        y = newY;
+    }
+    void setWidth(int newWidth){
+        width = newWidth;
+    }
+    void setHeight(int newHeight){
+        height = newHeight;
+    }
+    Rectangle2D(){
+        setX(0);
+        setY(0);
+        setWidth(1);
+        setHeight(1);
+    }
+    Rectangle2D(int x, int y, int width, int height){
+        setX(x);
+        setY(y);
+        setWidth(width);
+        setHeight(height);
+    }
+    const int getArea(){
+        return getWidth()*getHeight();
+    }
+    const int getPerimeter(){
+        return 2*getWidth()+2*getHeight();
+    }
+    
+};
 int main() {
     Average();
     Smallest();
