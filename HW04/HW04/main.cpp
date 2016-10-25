@@ -32,12 +32,15 @@ void Average(){
 }
 
 // 11.3
-void List(){
-    
+int* doubleCapacity(const int* list, int size){
+    int newArray[size*2];
+    return newArray;
 }
-int main(int argc, const char * argv[]) {
+
+// 11.5
+
+int main() {
     Average();
-    List();
     return 0;
 }
 
