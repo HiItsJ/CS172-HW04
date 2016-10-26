@@ -32,9 +32,25 @@ void Average(){
 }
 
 // 11.3
-int* doubleCapacity(const int* list, int size){
-    int newArray[size*2];
-    return newArray;
+template <typename T>
+T* doubleCapacity(const T* list, int size)
+{
+    if (size > 0 && list != NULL)
+    {
+        T* newList = new T[size*2];
+        for (int i = 0; i < size; i++)
+        {
+            newList[i] = list[i];
+        }
+        
+        delete[] list;
+        
+        return newList;
+    }
+    else
+    {
+        return NULL;
+    }
 }
 
 // 11.5
